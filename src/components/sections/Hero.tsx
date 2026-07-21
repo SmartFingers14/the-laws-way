@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { firm, images } from "@/lib/site";
+import { firm } from "@/lib/site";
+
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -25,7 +25,7 @@ export function Hero() {
       id="top"
       className="relative flex min-h-screen items-center overflow-hidden bg-ink-900"
     >
-      {/* Full-bleed photograph with a slow cinematic zoom */}
+      {/* Full-bleed looping film with a slow cinematic zoom */}
       <motion.div
         aria-hidden
         initial={{ scale: reduce ? 1 : 1.12 }}
@@ -33,15 +33,19 @@ export function Hero() {
         transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
         className="absolute inset-0"
       >
-        <Image
-          src={images.hero}
-          alt="The pillars of a grand courthouse"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/video/hero-poster.jpg"
+          className="h-full w-full object-cover"
+        >
+          <source src="/video/hero-loop.mp4" type="video/mp4" />
+        </video>
       </motion.div>
+
 
       {/* Layered navy veils for legibility + mood */}
       <div aria-hidden className="absolute inset-0 bg-hero-veil" />
@@ -123,24 +127,7 @@ export function Hero() {
           </motion.div>
         </div>
       </motion.div>
-
-      {/* Scroll cue */}
-      <motion.div
-        aria-hidden
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 lg:flex"
-      >
-        <span className="text-[0.6rem] uppercase tracking-widest text-cream/50">
-          Scroll
-        </span>
-        <motion.span
-          animate={reduce ? {} : { y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="h-8 w-px bg-gradient-to-b from-gold to-transparent"
-        />
-      </motion.div>
     </section>
+
   );
 }
