@@ -34,6 +34,110 @@ video {
   background: linear-gradient(90deg, #b08d57 0%, rgba(176, 141, 87, 0) 100%);
 }
 
+/* ------------------------------------------------------------------ */
+/*  Buttons — a considered, premium system used across the site        */
+/* ------------------------------------------------------------------ */
+
+/* Shared base: sizing, type, and the animated shine sweep */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-family: var(--font-lato);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease, color 0.35s ease, border-color 0.35s ease,
+    background 0.35s ease;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn:focus-visible {
+  outline: 2px solid #d9b877;
+  outline-offset: 3px;
+}
+
+/* The moving light that sweeps across on hover */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 80%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn:hover::before {
+  transform: translateX(120%);
+}
+
+/* Primary — gold gradient with layered depth + glow */
+.btn-gold {
+  color: #0a1730;
+  background: linear-gradient(135deg, #d9b877 0%, #b08d57 55%, #9a7842 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 10px 24px -8px rgba(176, 141, 87, 0.55),
+    0 2px 6px -2px rgba(10, 23, 48, 0.4);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 16px 34px -8px rgba(176, 141, 87, 0.7),
+    0 4px 10px -2px rgba(10, 23, 48, 0.45);
+}
+
+/* Outline on dark backgrounds — fills with gold gradient on hover */
+.btn-outline {
+  color: #f6f3ec;
+  border: 1px solid rgba(217, 184, 119, 0.5);
+  background: rgba(217, 184, 119, 0.04);
+  backdrop-filter: blur(2px);
+}
+.btn-outline:hover {
+  color: #0a1730;
+  border-color: transparent;
+  background: linear-gradient(135deg, #d9b877 0%, #b08d57 60%, #9a7842 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -10px rgba(176, 141, 87, 0.6);
+}
+
+/* Outline on light backgrounds */
+.btn-outline-dark {
+  color: #8a6d3b;
+  border: 1px solid rgba(138, 109, 59, 0.45);
+  background: transparent;
+}
+.btn-outline-dark:hover {
+  color: #f6f3ec;
+  border-color: transparent;
+  background: linear-gradient(135deg, #b08d57 0%, #9a7842 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -10px rgba(138, 109, 59, 0.5);
+}
+
+/* The trailing arrow nudges forward on hover */
+.btn-arrow {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+
 /* Small-caps eyebrow label */
 .eyebrow {
   font-family: var(--font-lato);

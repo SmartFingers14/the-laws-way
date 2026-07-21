@@ -104,14 +104,10 @@ export function Hero() {
             variants={item}
             className="mt-9 flex flex-col gap-4 sm:mt-11 sm:flex-row sm:items-center"
           >
-            <a
-              href="#contact"
-              className="group inline-flex w-full cursor-pointer items-center justify-center gap-3 bg-gold px-8 py-4 text-xs uppercase tracking-widest text-ink-900 shadow-gold transition-all duration-300 hover:bg-gold-light sm:w-auto"
-            >
-
+            <a href="#contact" className="btn btn-gold w-full sm:w-auto">
               {firm.cta}
               <svg
-                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                className="btn-arrow h-4 w-4"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -120,12 +116,10 @@ export function Hero() {
                 <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
-            <a
-              href="#practice"
-              className="inline-flex cursor-pointer items-center justify-center gap-2 border border-cream/25 px-8 py-4 text-xs uppercase tracking-widest text-cream/90 transition-colors duration-300 hover:border-gold hover:text-gold"
-            >
+            <a href="#practice" className="btn btn-outline w-full sm:w-auto">
               Explore Our Practice
             </a>
+
           </motion.div>
         </div>
       </motion.div>

@@ -63,10 +63,11 @@ export function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden cursor-pointer border border-gold px-5 py-2.5 text-xs uppercase tracking-widest text-gold transition-colors duration-300 hover:bg-gold hover:text-ink-900 lg:inline-block"
+          className="btn btn-outline hidden !px-6 !py-2.5 lg:inline-flex"
         >
           Consultation
         </Link>
+
 
 
         {/* Mobile toggle */}
@@ -120,10 +121,11 @@ export function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="mt-4 block bg-gold px-5 py-3 text-center text-xs uppercase tracking-widest text-ink-900"
+                  className="btn btn-gold mt-4 w-full"
                 >
                   {firm.cta}
                 </Link>
+
               </li>
 
             </ul>

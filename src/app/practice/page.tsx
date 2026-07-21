@@ -101,8 +101,9 @@ export default function PracticePage() {
           <Reveal delay={0.2}>
             <Link
               href="/contact"
-              className="mt-9 inline-block bg-gold px-8 py-4 text-xs uppercase tracking-widest text-ink-900 transition-colors duration-300 hover:bg-gold-light"
+              className="btn btn-gold mt-9"
             >
+
               Request a Confidential Consultation
             </Link>
           </Reveal>

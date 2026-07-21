@@ -131,13 +131,10 @@ export function Contact() {
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="group inline-flex w-full cursor-pointer items-center justify-center gap-3 bg-gold px-8 py-4 text-xs uppercase tracking-widest text-ink-900 transition-colors duration-300 hover:bg-gold-light sm:w-auto"
-                  >
+                  <button type="submit" className="btn btn-gold w-full sm:w-auto">
                     {firm.cta}
                     <svg
-                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                      className="btn-arrow h-4 w-4"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -146,6 +143,7 @@ export function Contact() {
                       <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </button>
+
 
                   <p className="pt-2 text-xs leading-relaxed text-cream/40">
                     Submitting this form does not create an attorney–client

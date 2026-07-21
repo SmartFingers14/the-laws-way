@@ -80,12 +80,10 @@ export default function CounselPage() {
 
         <div className="mx-auto mt-16 max-w-7xl px-6 text-center lg:px-10">
           <Reveal>
-            <Link
-              href="/contact"
-              className="inline-block border border-gold-dark px-8 py-4 text-xs uppercase tracking-widest text-gold-dark transition-colors duration-300 hover:bg-gold-dark hover:text-cream"
-            >
+            <Link href="/contact" className="btn btn-outline-dark">
               Request an Introduction
             </Link>
+
           </Reveal>
         </div>
       </section>
