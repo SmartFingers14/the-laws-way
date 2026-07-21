@@ -7,8 +7,9 @@ import { firm, images } from "@/lib/site";
 
 export function Firm() {
   return (
-    <section id="firm" className="relative bg-cream py-24 lg:py-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-12 lg:px-10">
+    <section id="firm" className="relative bg-cream py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 sm:gap-16 lg:grid-cols-12 lg:px-10">
+
         {/* Left: layered photography */}
         <div className="lg:col-span-5">
           <Reveal>

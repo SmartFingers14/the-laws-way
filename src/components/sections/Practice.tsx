@@ -7,7 +7,8 @@ import { practiceAreas, images } from "@/lib/site";
 
 export function Practice() {
   return (
-    <section id="practice" className="relative bg-ink-900 py-24 lg:py-32">
+    <section id="practice" className="relative bg-ink-900 py-16 sm:py-24 lg:py-32">
+
       <div className="grain absolute inset-0" />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         {/* Header */}
@@ -66,13 +67,14 @@ export function Practice() {
                   {area.title}
                 </h3>
 
-                {/* Revealed detail on hover */}
-                <div className="grid grid-rows-[0fr] transition-all duration-500 group-hover:grid-rows-[1fr]">
+                {/* Detail: always visible on touch, hover-revealed on desktop */}
+                <div className="grid grid-rows-[1fr] transition-all duration-500 lg:grid-rows-[0fr] lg:group-hover:grid-rows-[1fr]">
                   <div className="overflow-hidden">
                     <p className="pt-3 text-sm leading-relaxed text-cream/75">
                       {area.blurb}
                     </p>
                     <div className="mt-4 flex items-center gap-2 text-xs uppercase tracking-widest text-gold">
+
                       Enquire
                       <svg
                         className="h-3.5 w-3.5"

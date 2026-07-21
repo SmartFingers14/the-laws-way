@@ -23,13 +23,14 @@ export function Testimonials() {
   const active = testimonials[index];
 
   return (
-    <section id="counsel" className="relative overflow-hidden bg-ink-800 py-24 lg:py-32">
+    <section id="counsel" className="relative overflow-hidden bg-ink-800 py-16 sm:py-24 lg:py-32">
       <div className="grain absolute inset-0" />
       {/* oversized quotation mark */}
       <span
         aria-hidden
-        className="pointer-events-none absolute -top-10 left-6 font-serif text-[16rem] leading-none text-gold/10 lg:left-20 lg:text-[22rem]"
+        className="pointer-events-none absolute -top-6 left-4 font-serif text-[9rem] leading-none text-gold/10 sm:-top-10 sm:left-6 sm:text-[16rem] lg:left-20 lg:text-[22rem]"
       >
+
         &ldquo;
       </span>
 

@@ -10,7 +10,8 @@ export function Approach() {
     <section id="approach" className="relative overflow-hidden bg-cream">
       <div className="mx-auto grid max-w-[1600px] lg:grid-cols-2">
         {/* Left — full-height image */}
-        <div className="relative min-h-[420px] lg:min-h-[720px]">
+        <div className="relative min-h-[340px] sm:min-h-[420px] lg:min-h-[720px]">
+
           <Image
             src={images.approach}
             alt="The scales of justice"
@@ -37,8 +38,9 @@ export function Approach() {
         </div>
 
         {/* Right — principles */}
-        <div className="flex items-center px-6 py-24 lg:px-16 lg:py-32">
+        <div className="flex items-center px-6 py-16 sm:py-24 lg:px-16 lg:py-32">
           <div className="w-full">
+
             <Reveal>
               <p className="eyebrow flex items-center gap-4 text-gold-deep">
                 <span className="inline-block h-px w-10 bg-gold-deep" />

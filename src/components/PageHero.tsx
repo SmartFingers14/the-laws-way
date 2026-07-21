@@ -15,7 +15,8 @@ export function PageHero({
   image: string;
 }) {
   return (
-    <section className="relative flex min-h-[52vh] items-end overflow-hidden bg-ink-900 pb-16 pt-40 lg:min-h-[58vh] lg:pb-20">
+    <section className="relative flex min-h-[44vh] items-end overflow-hidden bg-ink-900 pb-12 pt-32 sm:min-h-[52vh] sm:pb-16 sm:pt-40 lg:min-h-[58vh] lg:pb-20">
+
       <div aria-hidden className="absolute inset-0">
         <Image
           src={image}

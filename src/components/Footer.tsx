@@ -7,10 +7,11 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gold/20 bg-ink-900">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-12">
+      <div className="mx-auto max-w-7xl px-6 py-14 sm:py-16 lg:px-10">
+        <div className="grid gap-10 sm:grid-cols-2 sm:gap-12 lg:grid-cols-12">
           {/* Brand */}
-          <div className="lg:col-span-5">
+          <div className="sm:col-span-2 lg:col-span-5">
+
             <div className="flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center border border-gold/60 font-serif text-lg text-gold">
                 {firm.shortName.slice(0, 2)}

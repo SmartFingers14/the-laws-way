@@ -10,7 +10,8 @@ export function Contact() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-ink-900 py-24 lg:py-32">
+    <section id="contact" className="relative overflow-hidden bg-ink-900 py-16 sm:py-24 lg:py-32">
+
       {/* Background photograph, heavily veiled */}
       <div aria-hidden className="absolute inset-0">
         <Image

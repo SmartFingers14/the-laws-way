@@ -59,21 +59,22 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative mx-auto w-full max-w-7xl px-6 pt-32 pb-24 lg:px-10"
+        className="relative mx-auto w-full max-w-7xl px-6 pt-28 pb-20 sm:pt-32 sm:pb-24 lg:px-10"
       >
         <div className="max-w-3xl">
           <motion.p
             variants={item}
-            className="eyebrow flex items-center gap-4 text-gold"
+            className="eyebrow flex items-center gap-3 text-gold sm:gap-4"
           >
-            <span className="inline-block h-px w-10 bg-gold" />
+            <span className="inline-block h-px w-8 bg-gold sm:w-10" />
             Est. {firm.established} &nbsp;·&nbsp; {firm.location}
           </motion.p>
 
           <motion.h1
             variants={item}
-            className="mt-8 font-serif text-[2.75rem] leading-[1.05] text-cream sm:text-6xl lg:text-7xl"
+            className="mt-6 font-serif text-[2.25rem] leading-[1.08] text-cream sm:mt-8 sm:text-6xl sm:leading-[1.05] lg:text-7xl"
           >
+
             Discreet counsel for
             <br />
             matters that
@@ -92,7 +93,7 @@ export function Hero() {
 
           <motion.p
             variants={item}
-            className="mt-8 max-w-xl text-lg leading-relaxed text-cream/75"
+            className="mt-6 max-w-xl text-base leading-relaxed text-cream/75 sm:mt-8 sm:text-lg"
           >
             {firm.name} is a full-service chambers advising a select clientele of
             individuals and enterprises — with the confidentiality the stakes
@@ -101,12 +102,13 @@ export function Hero() {
 
           <motion.div
             variants={item}
-            className="mt-11 flex flex-col gap-4 sm:flex-row sm:items-center"
+            className="mt-9 flex flex-col gap-4 sm:mt-11 sm:flex-row sm:items-center"
           >
             <a
               href="#contact"
-              className="group inline-flex cursor-pointer items-center justify-center gap-3 bg-gold px-8 py-4 text-xs uppercase tracking-widest text-ink-900 shadow-gold transition-all duration-300 hover:bg-gold-light"
+              className="group inline-flex w-full cursor-pointer items-center justify-center gap-3 bg-gold px-8 py-4 text-xs uppercase tracking-widest text-ink-900 shadow-gold transition-all duration-300 hover:bg-gold-light sm:w-auto"
             >
+
               {firm.cta}
               <svg
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"

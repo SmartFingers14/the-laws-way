@@ -32,17 +32,18 @@ export function Navbar() {
         {/* Wordmark */}
         <Link href="/" className="group flex items-center gap-3" aria-label={firm.name}>
 
-          <span className="flex h-10 w-10 items-center justify-center border border-gold/60 text-gold font-serif text-lg leading-none">
+          <span className="flex h-9 w-9 items-center justify-center border border-gold/60 text-gold font-serif text-base leading-none sm:h-10 sm:w-10 sm:text-lg">
             {firm.shortName.slice(0, 2)}
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-serif text-lg tracking-wide text-cream">
+            <span className="font-serif text-base tracking-wide text-cream sm:text-lg">
               {firm.name}
             </span>
-            <span className="mt-1 text-[0.6rem] uppercase tracking-widest text-gold/80">
+            <span className="mt-1 hidden text-[0.6rem] uppercase tracking-widest text-gold/80 sm:block">
               Advocates &amp; Legal Counsel
             </span>
           </span>
+
         </Link>
 
         {/* Desktop links */}

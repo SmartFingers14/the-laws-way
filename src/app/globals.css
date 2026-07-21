@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -16,7 +17,16 @@ body {
   color: #0f172a;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* Prevent any decorative element from creating horizontal scroll on mobile */
+  overflow-x: hidden;
 }
+
+/* Media never overflows its container on small screens */
+img,
+video {
+  max-width: 100%;
+}
+
 
 /* Thin gold rule used as an editorial accent */
 .rule-gold {
