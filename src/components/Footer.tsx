@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { firm, navLinks, practiceAreas } from "@/lib/site";
+
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -34,14 +36,15 @@ export function Footer() {
             <ul className="mt-5 space-y-3">
               {navLinks.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     className="text-sm text-cream/60 transition-colors duration-200 hover:text-gold"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
+
             </ul>
           </div>
 
@@ -53,14 +56,15 @@ export function Footer() {
             <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {practiceAreas.map((a) => (
                 <li key={a.id}>
-                  <a
-                    href="#practice"
+                  <Link
+                    href="/practice"
                     className="text-sm text-cream/60 transition-colors duration-200 hover:text-gold"
                   >
                     {a.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
+
             </ul>
           </div>
         </div>
@@ -71,16 +75,17 @@ export function Footer() {
             © {year} {firm.name}. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-6">
-            <a href="#" className="transition-colors duration-200 hover:text-cream/70">
+            <Link href="/legal/privacy" className="transition-colors duration-200 hover:text-cream/70">
               Privacy Policy
-            </a>
-            <a href="#" className="transition-colors duration-200 hover:text-cream/70">
+            </Link>
+            <Link href="/legal/terms" className="transition-colors duration-200 hover:text-cream/70">
               Terms of Use
-            </a>
-            <a href="#" className="transition-colors duration-200 hover:text-cream/70">
+            </Link>
+            <Link href="/legal/disclaimer" className="transition-colors duration-200 hover:text-cream/70">
               Disclaimer
-            </a>
+            </Link>
           </div>
+
         </div>
 
         {/* Bar Council disclaimer — a genuinely human, India-specific touch */}

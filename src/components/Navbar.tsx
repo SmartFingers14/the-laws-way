@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { firm, navLinks } from "@/lib/site";
+
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +30,8 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
         {/* Wordmark */}
-        <a href="#top" className="group flex items-center gap-3" aria-label={firm.name}>
+        <Link href="/" className="group flex items-center gap-3" aria-label={firm.name}>
+
           <span className="flex h-10 w-10 items-center justify-center border border-gold/60 text-gold font-serif text-lg leading-none">
             {firm.shortName.slice(0, 2)}
           </span>
@@ -40,29 +43,30 @@ export function Navbar() {
               Advocates &amp; Legal Counsel
             </span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-9 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="group relative text-sm uppercase tracking-widest text-cream/80 transition-colors duration-200 hover:text-cream"
               >
                 {link.label}
                 <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
-        <a
-          href="#contact"
+        <Link
+          href="/contact"
           className="hidden cursor-pointer border border-gold px-5 py-2.5 text-xs uppercase tracking-widest text-gold transition-colors duration-300 hover:bg-gold hover:text-ink-900 lg:inline-block"
         >
           Consultation
-        </a>
+        </Link>
+
 
         {/* Mobile toggle */}
         <button
@@ -102,24 +106,25 @@ export function Navbar() {
             <ul className="flex flex-col px-6 py-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className="block border-b border-cream/10 py-4 text-sm uppercase tracking-widest text-cream/80"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   onClick={() => setOpen(false)}
                   className="mt-4 block bg-gold px-5 py-3 text-center text-xs uppercase tracking-widest text-ink-900"
                 >
                   {firm.cta}
-                </a>
+                </Link>
               </li>
+
             </ul>
           </motion.div>
         )}
