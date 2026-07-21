@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-garamond: "EB Garamond", Georgia, serif;
+  --font-lato: "Lato", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f3ec;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Thin gold rule used as an editorial accent */
+.rule-gold {
+  height: 1px;
+  background: linear-gradient(90deg, #b08d57 0%, rgba(176, 141, 87, 0) 100%);
+}
+
+/* Small-caps eyebrow label */
+.eyebrow {
+  font-family: var(--font-lato);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* Subtle paper grain for the dark sections */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+::selection {
+  background: rgba(176, 141, 87, 0.28);
+  color: #0a1730;
+}
+
+/* Custom scrollbar for a considered feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #efe9dc;
+}
+::-webkit-scrollbar-thumb {
+  background: #b08d57;
+  border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
